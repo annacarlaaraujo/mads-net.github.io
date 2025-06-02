@@ -1,0 +1,30 @@
+color:
+  palette:
+    black: "#1A1A1A"
+    white: "#F9F9F9"
+    orange: "#DA6A15"
+    pink: "#FF3D7F"
+  foreground: black
+  background: white
+  primary: orange
+  secondary: orange
+  tertiary: orange
+  danger: pink
+
+logo: 
+  medium: https://avatars.githubusercontent.com/u/177097168?s=200&v=4
+
+typography:
+  fonts:
+    - family: Open Sans
+      source: google
+    - family: Rubik
+      source: google
+    - family: IBM Plex Mono
+      source: google
+
+  base: Open Sans
+  headings:
+    family: Rubik
+    weight: 400
+  monospace: IBM Plex Mono

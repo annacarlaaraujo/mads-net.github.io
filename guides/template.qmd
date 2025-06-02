@@ -1,0 +1,16 @@
+---
+title: "template"
+author: "Paolo Bosetti"
+affiliation: "University of Trento"
+date: 06/02/2025
+date-modified: today
+format: html
+draft: true
+categories: [template]
+abstract: |
+  This is a template for Quarto documents. It can be used to create reports, articles, or any other type of document.
+  You can use it as a starting point for your own documents.
+---
+
+# Contents
+

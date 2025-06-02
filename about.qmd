@@ -1,0 +1,16 @@
+---
+title: About 
+subtitle: About this project
+format: html
+about:
+  template: trestles
+  image: https://avatars.githubusercontent.com/u/177097168?s=200&v=4
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/MADS-Net
+    - text: "![](https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png)"
+      href: https://creativecommons.org/licenses/by-sa/4.0/
+---
+
+# MADS-Net

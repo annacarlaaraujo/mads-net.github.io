@@ -1,0 +1,16 @@
+---
+title: "Guides"
+author: "Paolo Bosetti"
+date: "02/05/2025"
+format: html
+listing:
+  type: table
+  sort: "date desc"
+  contents: guides
+  fields: [date, title, author, description]
+  feed: true
+---
+
+# Guides
+
+

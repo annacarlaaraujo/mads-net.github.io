@@ -1,0 +1,20 @@
+project:
+  type: website
+
+website:
+  title: "MADS"
+  navbar:
+    left:
+      - href: guides.qmd
+        text: "Guides"
+    right:
+      - about.qmd
+
+format:
+  html:
+    toc: true
+    email-obfuscation: "javascript"
+    theme: 
+      - flatly
+      - brand
+      - custom.scss
