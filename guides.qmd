@@ -7,10 +7,14 @@ listing:
   type: table
   sort: "date desc"
   contents: guides
-  fields: [date, title, author, description]
+  categories: true
+  fields: [date, title, author, description, categories, reading-time]
   feed: true
+  table-hover: true
 ---
 
-# Guides
+::: callout-note
+Guides are open to contribution: fork the repo <https://github.com/mads-net/mads-net.github.io>, make some changes, and submit a pull request.
+:::
 
 
