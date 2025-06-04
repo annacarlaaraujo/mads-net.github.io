@@ -1,0 +1,85 @@
+---
+title: "Network structure"
+author: "Paolo Bosetti"
+affiliation: "University of Trento"
+date: 06/04/2025
+date-modified: today
+format: html
+draft: false
+categories: [template]
+abstract: |
+  Illustrate a typical MADS network structure and its requirements.
+---
+
+# Architecture
+
+The typical architecture of a MADS network can be represented as:
+
+```{dot}
+//| label: fig-net
+//| fig-cap: "MADS Network"
+//| fig-width: 6
+//| fig-height: 3
+digraph "MADS Network" {
+  rankdir=LR
+  bgcolor="#ffffff00"
+  node[shape="rect", style=filled, fillcolor="#ffffff"]
+
+  p1[label="Plugin 1", shape=cds]
+  a1[label="Agent 1\n(source)"]
+  p2[label="Plugin 2", shape=cds]
+  a2[label="Agent 2\n(filter)"]
+  p3[label="Plugin 3", shape=cds]
+  a3[label="Agent 3\n(sink)"]
+  a4[label="Monolithic\nAgent (filter)"]
+  mongo[label="MongoDB", shape=cylinder]
+  
+  p1 -> a1[arrowhead=none]
+  p2 -> a2[arrowhead=none]
+  p3 -> a3[arrowhead=none]
+
+  a1->broker
+  a2->broker[dir=both]
+  a3->broker[dir=back]
+  a4->broker[dir=both]
+
+  broker->logger
+  logger->mongo[label="BSON", style=dashed]
+}
+```
+
+Agents can be:
+
+* **monolithic**: implemented as a single executable inheriting the `Mads::Agent` C++ class.
+* **plug-in**: a single executable that on runtime loads a proper plug-in (i.e. a dynamically loaded library)
+
+Regardless the type, agent can have three different behaviors:
+
+- **source**: they provide information to the network (e.g. by reading sensors)
+- **filter**: they operate and transform received information
+- **sink**: they consume information received from the network (e.g. to store or visualize)
+
+The MADS installer provides three general purpose agents, aptly named `source`, `filter`, and `sink`, that are designe do load proper plugins. The command `mads plugin` can be used to generate a suitable template for a new plugin to be developed.
+
+In the figure @fig-net, the solid lines represent a [ZeroMQ](https://zeromq.org) connection over TCP/IP, which uses compressed JSON as a data encoding protocol. Compression is preformed with the [snappy](https://github.com/google/snappy) library.
+
+
+# Layout and requirements
+
+::: callout-note
+To be done.
+:::
+
+
+# How to develop a plugin
+
+::: callout-note
+To be done.
+:::
+
+
+# How to deal with time
+
+::: callout-note
+To be done.
+:::
