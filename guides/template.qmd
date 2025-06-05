@@ -7,6 +7,12 @@ author:
 date: 06/02/2025
 date-modified: today
 format: html
+# or uncomment the following line to also create PDF format
+# format: 
+#   html:
+#     toc: true
+#   pdf:
+#     toc: true
 draft: true
 categories: [template]
 abstract: |

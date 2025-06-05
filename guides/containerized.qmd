@@ -6,7 +6,11 @@ author:
       - name: "University of Trento"
 date: 06/02/2025
 date-modified: today
-format: html
+format: 
+  html:
+    toc: true
+  pdf:
+    toc: true
 draft: false
 categories: [docker, basics]
 abstract: |

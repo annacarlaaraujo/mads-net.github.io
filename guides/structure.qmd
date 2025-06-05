@@ -6,7 +6,11 @@ author:
       - name: "University of Trento"
 date: 06/04/2025
 date-modified: today
-format: html
+format: 
+  html:
+    toc: true
+  pdf:
+    toc: trueml
 draft: false
 categories: [template, basics]
 abstract: |
