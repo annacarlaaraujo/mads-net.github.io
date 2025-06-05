@@ -10,7 +10,7 @@ format:
   html:
     toc: true
   pdf:
-    toc: trueml
+    toc: true
 draft: false
 categories: [template, basics]
 abstract: |
