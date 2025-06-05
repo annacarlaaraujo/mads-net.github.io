@@ -1,7 +1,9 @@
 ---
 title: "Containerized MADS"
-author: "Paolo Bosetti"
-affiliation: "University of Trento"
+author:
+  - name: "Paolo Bosetti"
+    affiliations: 
+      - name: "University of Trento"
 date: 06/02/2025
 date-modified: today
 format: html
