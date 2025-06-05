@@ -6,7 +6,7 @@ date: 06/02/2025
 date-modified: today
 format: html
 draft: false
-categories: [docker, container, setup]
+categories: [docker, basics]
 abstract: |
   The base agents for setting up a MADS network are available as a ontainerized environment.
 ---

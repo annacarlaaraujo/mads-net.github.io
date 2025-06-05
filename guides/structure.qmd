@@ -6,7 +6,7 @@ date: 06/04/2025
 date-modified: today
 format: html
 draft: false
-categories: [template]
+categories: [template, basics]
 abstract: |
   Illustrate a typical MADS network structure and its requirements.
 ---
@@ -48,6 +48,36 @@ digraph "MADS Network" {
 }
 ```
 
+::: callout-important
+Remember that the above schematic represent *processes*, regardless the physical machine on which they are being executed.
+
+For example, the whole network could run on a single workstation, or it could be conversely distributed over multiple devices connected to the same IP network, each device running a single process/node.
+:::
+
+
+In the figure @fig-net, the solid lines represent a [ZeroMQ](https://zeromq.org) connection over TCP/IP, which uses compressed JSON as a data encoding protocol. Compression is preformed with the [snappy](https://github.com/google/snappy) library. The dashed line, conversely, represents the proprietary MongoDB protocol, with data serialized as BSON (Binary-JSON).
+
+
+## The broker
+
+What is the broker purpose?
+
+The broker solves the issue of knowing multiple network addresses when you have a number of devices participating to the same distributed system.
+
+With the aid of the broker, any separate device partaking to the MADS network only needs to know a single hostname/IP address: that of the machine running the broker.
+
+::: callout-warning
+There can only be a single broker per network.
+:::
+
+Running the broker is quite simple:
+
+```sh
+mads broker
+```
+
+## The agents
+
 Agents can be:
 
 * **monolithic**: implemented as a single executable inheriting the `Mads::Agent` C++ class.
@@ -60,8 +90,6 @@ Regardless the type, agent can have three different behaviors:
 - **sink**: they consume information received from the network (e.g. to store or visualize)
 
 The MADS installer provides three general purpose agents, aptly named `source`, `filter`, and `sink`, that are designe do load proper plugins. The command `mads plugin` can be used to generate a suitable template for a new plugin to be developed.
-
-In the figure @fig-net, the solid lines represent a [ZeroMQ](https://zeromq.org) connection over TCP/IP, which uses compressed JSON as a data encoding protocol. Compression is preformed with the [snappy](https://github.com/google/snappy) library.
 
 
 # Layout and requirements

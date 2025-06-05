@@ -6,10 +6,11 @@ date: 06/02/2025
 date-modified: today
 format: html
 draft: false
-categories: [python, agent]
+categories: [python, agent, intermediate]
 abstract: |
   The `python_agent` repo on GitHub provides a MADS agent with an embedded python3 interpreter for developing MADS sgents in Python
 ---
+
 
 # Contents
 
