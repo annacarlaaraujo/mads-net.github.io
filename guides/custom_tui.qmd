@@ -1,0 +1,26 @@
+---
+title: "Custom Terminal User Interface for Shopfloor Updates"
+author: 
+  - name: "Anna Carla Araujo"
+    affiliations:
+      - name: "INSA"
+      - name: "University of Porto"
+      - name: "University of Minho"
+      
+date: 06/05/2025
+date-modified: today
+format: html
+draft: true
+categories: [advanced, tui, shopfloor]
+abstract: |
+  This is a guide for shopfloor tui. 
+  You can use it as a starting point for your own documents.
+---
+
+# Contents
+q
+## subtitle
+
+-   topic 1
+
+-   topic 2
