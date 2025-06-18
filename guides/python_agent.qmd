@@ -24,7 +24,14 @@ The Python3 MADS agent is available on <https://github.com/MADS-net/python_agent
 
 ## Installing
 
-You need to have `python3` and `python3-dev` installed. Then proceed as follows depending on your platform.
+You need to have `python3` and `python3-dev` installed. 
+- To identify if python3 is installed, type : python3 --version
+- To identify if python3-dev is installed, type: 
+find /Library/Developer/CommandLineTools/SDKs -name Python.h 2>/dev/null
+- if it does not find the file.h, you need to install it.
+
+
+Then proceed as follows depending on your platform.
 
 ### UNIX
 
@@ -33,6 +40,8 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install numpy
 # also install other necessary Python libs
+
+Run the following from project root (mads should be installed in your computer)
 
 cmake -Bbuild -DCMAKE_INSTALL_PREFIX="$(mads -p)"
 cmake --build build -j6
